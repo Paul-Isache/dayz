@@ -22,7 +22,7 @@ const YLabels = React.createClass({
         const hours = range(this.props.layout.displayHours[0], this.props.layout.displayHours[1]);
         each(hours, (hour) => {
             day.hour(hour);
-            labels.push(<div key={hour} className="hour">{day.format('ha')}</div>);
+            labels.push(<div key={hour} className="hour">{day.format('H:00')}</div>);
         });
 
         const multiDay = <div {...this.props.layout.propsForAllDayEventContainer()}>All Day</div>;

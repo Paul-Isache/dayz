@@ -18,7 +18,7 @@ const XLabels = React.createClass({
                 days.push(day.clone().add(i, 'day'));
             }
         }
-        const format = (this.props.display === 'month' ? 'dddd' : 'ddd, MMM Do');
+        const format = (this.props.display === 'month' ? 'dddd' : 'ddd D');
         const labels = map( days, function(day){
             return (
                 <div key={day.format('YYYYMMDD')} className="day-label">

@@ -84,6 +84,7 @@ const Dayz = React.createClass({
         );
         return (
             <div className={classes.join(' ')}>
+                <span className="date-general"><b>{this.props.date.format('MMMM')}</b> {this.props.date.format('YYYY')}</span> 
                 <XLabels date={this.props.date} display={this.props.display} />
                 <div className="body">
                     <YLabels
