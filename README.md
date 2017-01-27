@@ -1,6 +1,7 @@
 ## A day/week/monthly calendar component for React
 
 [![Build Status](https://travis-ci.org/nathanstitt/dayz.svg?branch=master)](https://travis-ci.org/nathanstitt/dayz)
+[![Known Vulnerabilities](https://snyk.io/test/github/paul-isache/dayz/badge.svg)](https://snyk.io/test/github/paul-isache/dayz)
 
 ## Features
 * Only includes the minimal amount of features needed.
