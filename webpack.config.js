@@ -47,6 +47,7 @@ var config = {
         quiet: false,
         noInfo: false,
         hot: true,
+        port: 6969,
         stats: {
             assets: false,
             colors: true,

@@ -1,4 +1,5 @@
 const React  = require('react');
+const moment = require('moment');
 const Layout = require('./data/layout');
 const Event  = require('./event');
 const Label  = require('./label');
@@ -116,6 +117,11 @@ const Day = React.createClass({
 
     render() {
         const props = this.props.layout.propsForDayContainer(this.props);
+        const currentDay = moment().milliseconds(0).seconds(0).minutes(0).hours(0).format('x');
+        
+        if(currentDay === this.props.day.format('x')){
+            props.className += ' current-day-wrap';
+        }
 
         return (
             <div ref="root"

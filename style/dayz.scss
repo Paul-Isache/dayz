@@ -7,6 +7,7 @@ $dayz-heading-label-color:  #555 !default;
 
 $dayz-event-default-color: #6F8376;
 $dayz-event-text-default-color: #F5F5F5;
+$lightBlue500: #2196F3;
 
 $dayz-event-colors: (
     #4D4D4D, // (gray)
@@ -55,12 +56,32 @@ $dayz-event-text-colors: (
     }
 
     .x-labels {
-        height: $dayz-event-height;
+        //height: $dayz-event-height;
+        margin-bottom: 5px;
         display: flex;
         flex-direction: row;
         .day-label {
-            flex-grow: 1;
-            padding-left: 8px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //padding-left: 8px;
+
+            .day-index{
+                margin-left: 3px;
+            }
+
+            &.current-day{
+                color: $lightBlue500;
+
+                .day-index{
+                    background-color:$lightBlue500;
+                    border-radius: 100%;
+                    padding: 5px;
+                    display: inline-block;
+                    color: white;
+                }
+            }
         }
     }
 
@@ -116,6 +137,10 @@ $dayz-event-text-colors: (
         .event > * {
             height: 100%;
         }
+
+        &.current-day-wrap {
+            background-color: rgba(33,150,243, .2)
+        }
     }
 
     &.month, &.week .all-day, &.day .all-day {
@@ -129,8 +154,8 @@ $dayz-event-text-colors: (
     }
 
     &.week, &.day {
-        .x-labels{ padding-left: $dayz-y-label-width; }
-        .days {
+        // .x-labels{ padding-left: $dayz-y-label-width; }
+        .days, .x-labels {
             margin-left: $dayz-y-label-width;
         }
         .day {
@@ -153,6 +178,14 @@ $dayz-event-text-colors: (
                 }
             }
             .label { display: none; }
+        }
+    }
+
+    &.day{
+        .day {
+            &.current-day-wrap {
+                background-color: transparent;
+            }
         }
     }
 
