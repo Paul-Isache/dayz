@@ -49,9 +49,9 @@ const Dayz = React.createClass({
         this.calculateLayout(this.props);
     },
 
-    dayClick() {
+    dayClick(event, date) {
         if (this.props.onDayClick) {
-            this.props.onDayClick();
+            this.props.onDayClick(event, date);
         }
     },
 
