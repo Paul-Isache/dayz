@@ -74,6 +74,8 @@ $dayz-event-text-colors: (
                 color: $lightBlue500;
 
                 .day-index{
+                    width: 26px;
+                    text-align: center;
                     background-color:$lightBlue500;
                     border-radius: 100%;
                     padding: 5px;
